@@ -1,3 +1,9 @@
+
+if (!localStorage.getItem("user")) {
+    alert("No estás logueado, redirigiendo a la página de login...");
+    window.location.href = "./login.html";
+}
+
 const productos = [
     //MANGAS
     {
@@ -212,7 +218,7 @@ function actualizarBotonesAgregar() {
 
 let productosEnCarrito;
 
-let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+let productosEnCarritoLS = sessionStorage.getItem("productos-en-carrito");
 
 if (productosEnCarritoLS) {
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
@@ -235,7 +241,7 @@ function agregarAlCarrito(e) {
 
     actualizarNumerito();
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    sessionStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
 function actualizarNumerito() {
