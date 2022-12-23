@@ -89,8 +89,9 @@ function vaciarCarrito() {
 
 
 function actualizarTotal() {
-    const totalCalculado = productosEnCarrito.reduce((acc, currentValue) => acc + (currentValue.price * currentValue.unit_price), 0);
+    const totalCalculado = productosEnCarrito.reduce((acumulador, producto) => acumulador + producto.unit_price, 0);
     total.innerText = `$${totalCalculado}`;
+    sessionStorage.setItem("total", totalCalculado);
 }
 
 
@@ -143,7 +144,7 @@ const irAlPago = (e) => {
         picture_url: producto.thumbnail,
         currency_id: producto.currency_id,
         unit_price: producto.unit_price,
-        quantity:producto.available_quantity
+        quantity:sessionStorage.getItem("total")
       }
       botonComprar.innerHTML = spinner;
       pagoML(item)

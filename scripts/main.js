@@ -1,12 +1,11 @@
 class ProductoCarrito{
-    constructor(title,description,thumbnail,currency_id, unit_price,available_quantity,price){
+    constructor(title,description,thumbnail,currency_id, unit_price,available_quantity){
         this.title = title
         this.description = description
         this.thumbnail = thumbnail
         this.currency_id = currency_id
         this.unit_price = unit_price
         this.quantity = available_quantity
-        
     }
 }
 
