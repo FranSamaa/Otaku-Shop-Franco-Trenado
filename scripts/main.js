@@ -1,167 +1,40 @@
+class ProductoCarrito{
+    constructor(title,description,thumbnail,currency_id, unit_price,available_quantity,price){
+        this.title = title
+        this.description = description
+        this.thumbnail = thumbnail
+        this.currency_id = currency_id
+        this.unit_price = unit_price
+        this.quantity = available_quantity
+        
+    }
+}
+
 
 if (!localStorage.getItem("user")) {
     alert("No estás logueado, redirigiendo a la página de login...");
     window.location.href = "./login.html";
 }
 
-const productos = [
-    //MANGAS
-    {
-        id: "manga1-Naruto",
-        titulo: "Naruto",
-        imagen: "Mangas/naruto-1.jpg",
-        categoria:{
-            nombre: "Mangas",
-            id: "mangas"
-        },
-        precio: 900,
-    },
-    {
-        id: "manga2-Naruto",
-        titulo: "Naruto",
-        imagen: "Mangas/naruto-2.jpg",
-        categoria:{
-            nombre: "Mangas",
-            id: "mangas"
+const callML= ()=>{
+    return fetch ("https://api.mercadolibre.com/sites/MLA/search?q=mangas")
+}
 
-        },
-        precio: 900,
-    },
-    {
-        id: "manga1-OnePiece-1",
-        titulo: "One Piece",
-        imagen: "Mangas/one-piece-1.jpg",
-        categoria:{
-            nombre: "Mangas",
-            id: "mangas"
-        },
-        precio: 900,
-    },
-    {
-        id: "manga2-OnePiece-2",
-        titulo: "One Piece",
-        imagen: "Mangas/one-piece-2.jpg",
-        categoria:{
-            nombre: "Mangas",
-            id: "mangas"
-        },
-        precio: 900,
-    },
-    {
-        id: "manga1-Bleach",
-        titulo: "Bleach",
-        imagen: "Mangas/bleach-1.jpg",
-        categoria:{
-            nombre: "Mangas",
-            id: "mangas"
-        },
-        precio: 900,
-    },
-    //REMERAS
-    {
-        id: "remera1-Naruto",
-        titulo: "Remera-Naruto",
-        imagen: "Remeras/naruto-1.jpg",
-        categoria:{
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 2000,
-    },
-    {
-        id: "remera2-Naruto",
-        titulo: "Remera-Naruto",
-        imagen: "Remeras/naruto-2.jpg",
-        categoria:{
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 2000,
-    },
-    {
-        id: "remera1-OnePiece",
-        titulo: "Remera-OnePiece",
-        imagen: "Remeras/one-piece-1.jpg",
-        categoria:{
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 2000,
-    },
-    {
-        id: "remera2-OnePiece",
-        titulo: "Remera-OnePiece",
-        imagen: "Remeras/one-piece-2.jpg",
-        categoria:{
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 2000,
-    },
-    {
-        id: "remera1-Bleach",
-        titulo: "Remera-Bleach",
-        imagen: "Remeras/bleach-1.jpg",
-        categoria:{
-            nombre: "Remeras",
-            id: "remeras"
-        },
-        precio: 2000,
-    },  
-    //buzos
-    {
-        id: "buzo1-Naruto",
-        titulo: "Buzo-Naruto",
-        imagen: "Buzos/naruto-1.jpg",
-        categoria:{
-            nombre: "Buzos",
-            id: "buzos"
 
-        },
-        precio: 3000,
-    },
-    {
-        id: "buzo2-Naruto",
-        titulo: "Buzo-Naruto",
-        imagen: "Buzos/naruto-2.jpg",
-        categoria:{
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 3000,
-    },
-    {
-        id: "buzo1-OnePiece",
-        titulo: "Buzo-OnePiece",
-        imagen: "Buzos/one-piece-1.jpg",
-        categoria:{
-            nombre: "Buzos",
-            id: "buzos"
+productos=[]
 
-        },
-        precio: 3000,
-    },
-    {
-        id: "buzo2-OnePiece",
-        titulo: "Buzo-OnePiece",
-        imagen: "Buzos/one-piece-2.jpg",
-        categoria:{
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 3000,
-    },
-    {
-        id: "buzo1-Bleach",
-        titulo: "Buzo-Bleach",
-        imagen: "Buzos/bleach-1.jpg",
-        categoria:{
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 3000,
-    }
-];
+const getInfo = () => {
+    callML()
+    .then(res => res.json())
+    .then((res) => {
+        console.log(res);
+        productos = [...productos, ...res.results];
+        cargarProductos(productos, contenedorProductos)
+    })
+    .finally(() =>{
+        console.log('termino de cargar')
+    })
+}
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -172,24 +45,25 @@ function cargarProductos(productosElegidos) {
 
     contenedorProductos.innerHTML = "";
 
-    productosElegidos.forEach(producto => {
+    productosElegidos.forEach(productos => {
 
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
-            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <img class="producto-imagen" src="${productos.thumbnail}" alt="${productos.title}">
             <div class="producto-detalles">
-                <h3 class="producto-titulo">${producto.titulo}</h3>
-                <p class="producto-precio">$${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+                <h3 class="producto-titulo">${productos.title}</h3>
+                <p class="producto-precio">$${productos.price}</p>
+                <button class="producto-agregar" id="${productos.id}">Agregar</button>
             </div>
         `;
 
         contenedorProductos.append(div);
-    })
-
+    });
     actualizarBotonesAgregar();
+    
 }
+getInfo()
 
 cargarProductos(productos);
 
@@ -229,14 +103,23 @@ if (productosEnCarritoLS) {
 
 function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
 
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    const productoCarrito = new ProductoCarrito(
+        productoAgregado.title,
+        productoAgregado.description,
+        productoAgregado.thumbnail,
+        productoAgregado.currency_id,
+        productoAgregado.price,
+        productoAgregado.available_quantity
+
+        )
     if(productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
     } else {
         productoAgregado.cantidad = 1;
-        productosEnCarrito.push(productoAgregado);
+        productosEnCarrito.push(productoCarrito);
     }
 
     actualizarNumerito();

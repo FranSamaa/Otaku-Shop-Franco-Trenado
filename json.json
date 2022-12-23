@@ -1,0 +1,457 @@
+[
+    {
+        "id": "MLA881927447",
+        "title": "Manga - Demon Slayer - Elige Tu Tomo - Ivrea Koyoharu Shonen",
+        "condition": "new",
+        "thumbnail_id": "638013-MLA44368506429_122020",
+        "catalog_product_id": null,
+        "listing_type_id": "gold_special",
+        "permalink": "https://articulo.mercadolibre.com.ar/MLA-881927447-manga-demon-slayer-elige-tu-tomo-ivrea-koyoharu-shonen-_JM",
+        "buying_mode": "buy_it_now",
+        "site_id": "MLA",
+        "category_id": "MLA412445",
+        "domain_id": "MLA-BOOKS",
+        "thumbnail": "http://http2.mlstatic.com/D_638013-MLA44368506429_122020-I.jpg",
+        "currency_id": "ARS",
+        "order_backend": 1,
+        "price": 1250,
+        "original_price": null,
+        "sale_price": null,
+        "sold_quantity": 500,
+        "available_quantity": 258,
+        "official_store_id": null,
+        "use_thumbnail_id": true,
+        "accepts_mercadopago": true,
+        "tags": [
+            "good_quality_picture",
+            "good_quality_thumbnail",
+            "incomplete_technical_specs",
+            "loyalty_discount_eligible",
+            "immediate_payment",
+            "cart_eligible",
+            "best_seller_candidate",
+            "shipping_guaranteed"
+        ],
+        "variation_filters": [
+            "Número"
+        ],
+        "shipping": {
+            "logistic_type": "fulfillment",
+            "mode": "me2",
+            "store_pick_up": false,
+            "free_shipping": false,
+            "tags": [
+                "fulfillment",
+                "self_service_out"
+            ],
+            "promise": null
+        },
+        "stop_time": "2040-09-26T04:00:00.000Z",
+        "seller": {
+            "id": 98434282,
+            "nickname": "INVICTVSJUEGOS",
+            "car_dealer": false,
+            "real_estate_agency": false,
+            "registration_date": "2006-09-26T11:40:51.000-04:00",
+            "tags": [
+                "normal",
+                "eshop",
+                "credits_profile",
+                "mshops",
+                "messages_as_seller"
+            ],
+            "car_dealer_logo": "",
+            "permalink": "http://perfil.mercadolibre.com.ar/INVICTVSJUEGOS",
+            "seller_reputation": {
+                "level_id": "5_green",
+                "power_seller_status": "platinum",
+                "transactions": {
+                    "canceled": 1238,
+                    "completed": 28677,
+                    "period": "historic",
+                    "ratings": {
+                        "negative": 0.01,
+                        "neutral": 0,
+                        "positive": 0.99
+                    },
+                    "total": 29915
+                },
+                "metrics": {
+                    "sales": {
+                        "period": "60 days",
+                        "completed": 2840
+                    },
+                    "claims": {
+                        "period": "60 days",
+                        "rate": 0.0013,
+                        "value": 4
+                    },
+                    "delayed_handling_time": {
+                        "period": "60 days",
+                        "rate": 0.0073,
+                        "value": 21
+                    },
+                    "cancellations": {
+                        "period": "60 days",
+                        "rate": 0.0013,
+                        "value": 4
+                    }
+                }
+            },
+            "eshop": {
+                "eshop_id": 339942,
+                "seller": 98434282,
+                "nick_name": "INVICTVSJUEGOS",
+                "eshop_status_id": 1,
+                "site_id": "MLA",
+                "eshop_experience": 0,
+                "eshop_rubro": null,
+                "eshop_locations": [],
+                "eshop_logo_url": "http://http2.mlstatic.com/eshops-logo/98434282vc2331b.png"
+            }
+        },
+        "seller_address": {
+            "comment": "",
+            "address_line": "",
+            "zip_code": "",
+            "id": null,
+            "latitude": null,
+            "longitude": null,
+            "country": {
+                "id": "AR",
+                "name": "Argentina"
+            },
+            "state": {
+                "id": "AR-C",
+                "name": "Capital Federal"
+            },
+            "city": {
+                "id": null,
+                "name": "La paternal"
+            }
+        },
+        "address": {
+            "state_id": "AR-C",
+            "state_name": "Capital Federal",
+            "city_id": null,
+            "city_name": "La paternal"
+        },
+        "attributes": [
+            {
+                "id": "MANGA_SALE_FORMAT",
+                "name": "Formato de venta",
+                "value_id": null,
+                "value_name": "manga",
+                "attribute_group_id": "",
+                "attribute_group_name": "",
+                "value_struct": null,
+                "values": [
+                    {
+                        "id": null,
+                        "name": "manga",
+                        "struct": null,
+                        "source": 2860837171021627
+                    }
+                ],
+                "source": 2860837171021627,
+                "value_type": "string"
+            },
+            {
+                "id": "ITEM_CONDITION",
+                "name": "Condición del ítem",
+                "value_id": "2230284",
+                "value_name": "Nuevo",
+                "attribute_group_id": "OTHERS",
+                "attribute_group_name": "Otros",
+                "value_struct": null,
+                "values": [
+                    {
+                        "id": "2230284",
+                        "name": "Nuevo",
+                        "struct": null,
+                        "source": 2860837171021627
+                    }
+                ],
+                "source": 2860837171021627,
+                "value_type": "list"
+            }
+        ],
+        "prices": {
+            "id": "MLA881927447",
+            "prices": [
+                {
+                    "id": "81",
+                    "type": "standard",
+                    "currency_id": "ARS",
+                    "exchange_rate_context": "DEFAULT",
+                    "last_updated": "2022-12-16T03:53:47Z",
+                    "amount": 1250,
+                    "conditions": {
+                        "eligible": true,
+                        "context_restrictions": [],
+                        "start_time": null,
+                        "end_time": null
+                    },
+                    "regular_amount": null,
+                    "metadata": {}
+                },
+                {
+                    "id": "82",
+                    "type": "promotion",
+                    "currency_id": "ARS",
+                    "exchange_rate_context": "DEFAULT",
+                    "last_updated": "2022-12-16T03:53:47Z",
+                    "amount": 1187.5,
+                    "conditions": {
+                        "eligible": true,
+                        "context_restrictions": [
+                            "channel_mshops"
+                        ],
+                        "start_time": "2022-01-16T15:01:38Z",
+                        "end_time": "2023-01-01T02:59:59Z"
+                    },
+                    "regular_amount": 1250,
+                    "metadata": {
+                        "promotion_id": "TR-98434282-20220116110151151:MLA881927447",
+                        "promotion_type": "custom"
+                    }
+                }
+            ],
+            "presentation": {
+                "display_currency": "ARS"
+            },
+            "payment_method_prices": [
+                {
+                    "id": "8eeddaa5-3eb8-414c-985e-c9f80e752c56",
+                    "conditions": {
+                        "allowed_methods": [
+                            {
+                                "id": "consumer_credits",
+                                "issuer_id": 2032,
+                                "issuer_name": "",
+                                "payment_type_id": "digital_currency",
+                                "installments": null
+                            }
+                        ],
+                        "start_time": "2022-12-17T03:00:00Z",
+                        "end_time": "2022-12-27T03:00:00Z",
+                        "restricted_to_prices": null
+                    },
+                    "value": 5,
+                    "type": "percentage",
+                    "currency_id": null,
+                    "metadata": {
+                        "purchase_discount_campaign_id": "P-MLA10033005",
+                        "purchase_discount_rebate_id": "OFFER-MLA881927447-647259919",
+                        "purchase_discount_id": "MLA1899001",
+                        "purchase_discount_type": "BD"
+                    },
+                    "exchange_rate_context": "DEFAULT"
+                }
+            ],
+            "reference_prices": [
+                {
+                    "id": "54",
+                    "type": "min_standard",
+                    "conditions": {
+                        "eligible": true,
+                        "context_restrictions": [
+                            "channel_marketplace"
+                        ],
+                        "start_time": null,
+                        "end_time": null
+                    },
+                    "amount": 549,
+                    "currency_id": "ARS",
+                    "exchange_rate_context": "DEFAULT",
+                    "tags": [],
+                    "last_updated": "2022-06-25T04:13:49Z"
+                },
+                {
+                    "id": "55",
+                    "type": "was",
+                    "conditions": {
+                        "eligible": true,
+                        "context_restrictions": [
+                            "channel_marketplace"
+                        ],
+                        "start_time": "2022-06-25T04:13:49Z",
+                        "end_time": "2022-07-02T04:13:49Z"
+                    },
+                    "amount": 569.05,
+                    "currency_id": "ARS",
+                    "exchange_rate_context": "DEFAULT",
+                    "tags": [],
+                    "last_updated": "2022-06-25T04:13:49Z"
+                }
+            ],
+            "purchase_discounts": [
+                {
+                    "purchase_discount_id": "MLA1899001",
+                    "campaign_id": "P-MLA10033005",
+                    "rebate_id": "OFFER-MLA881927447-647259919",
+                    "type": "BD",
+                    "discount_percentage": 0.05,
+                    "conditions": {
+                        "eligible": true,
+                        "context_restrictions": [
+                            "channel_marketplace"
+                        ],
+                        "start_time": "2022-12-17T03:00:00Z",
+                        "end_time": "2022-12-27T03:00:00Z"
+                    },
+                    "max_benefit_count": 1,
+                    "max_discount_amount": 14000,
+                    "purchase_min_amount": 1,
+                    "funding_mode": "coupon"
+                }
+            ]
+        },
+        "variations_data": {
+            "69403433913": {
+                "thumbnail": "http://http2.mlstatic.com/D_848615-MLA44368513345_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "MTIS55610"
+            },
+            "65229385061": {
+                "thumbnail": "http://http2.mlstatic.com/D_870979-MLA44368490815_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "PCIA00620"
+            },
+            "173754835991": {
+                "thumbnail": "http://http2.mlstatic.com/D_658676-MLA47729095723_102021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "XUMC19733"
+            },
+            "173867965470": {
+                "thumbnail": "http://http2.mlstatic.com/D_912859-MLA48088674289_112021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "YPGJ34728"
+            },
+            "76978653266": {
+                "thumbnail": "http://http2.mlstatic.com/D_643837-MLA44987655332_022021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "PGJH12546"
+            },
+            "65229385065": {
+                "thumbnail": "http://http2.mlstatic.com/D_743374-MLA44368502468_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "FELG00575"
+            },
+            "85006190537": {
+                "thumbnail": "http://http2.mlstatic.com/D_886792-MLA46090515536_052021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "CYVD50796"
+            },
+            "65229385050": {
+                "thumbnail": "http://http2.mlstatic.com/D_601411-MLA43871018970_102020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "MTWT00450"
+            },
+            "94756708256": {
+                "thumbnail": "http://http2.mlstatic.com/D_932951-MLA47150908907_082021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "JFLO99848"
+            },
+            "173992735873": {
+                "thumbnail": "http://http2.mlstatic.com/D_954387-MLA48483450733_122021-O.jpg",
+                "ratio": "0.68",
+                "name": "",
+                "pictures_qty": 6,
+                "inventory_id": "GSYI51713"
+            },
+            "65229385057": {
+                "thumbnail": "http://http2.mlstatic.com/D_648499-MLA44368486964_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "LAWF00534"
+            },
+            "65229385078": {
+                "thumbnail": "http://http2.mlstatic.com/D_682265-MLA44368517278_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "FWRS00665"
+            },
+            "69403433922": {
+                "thumbnail": "http://http2.mlstatic.com/D_606911-MLA44368490859_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "HMLH55359"
+            },
+            "87911229384": {
+                "thumbnail": "http://http2.mlstatic.com/D_933540-MLA46543561043_062021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "UJHN62905"
+            },
+            "90231798938": {
+                "thumbnail": "http://http2.mlstatic.com/D_914430-MLA47004517982_082021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "APFU76346"
+            },
+            "174129448111": {
+                "thumbnail": "http://http2.mlstatic.com/D_718661-MLA48926926601_012022-O.jpg",
+                "ratio": "0.76",
+                "name": "",
+                "pictures_qty": 6,
+                "inventory_id": "IUNG61342"
+            },
+            "65229385074": {
+                "thumbnail": "http://http2.mlstatic.com/D_638013-MLA44368506429_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "KLOS00683"
+            },
+            "77104326394": {
+                "thumbnail": "http://http2.mlstatic.com/D_820843-MLA45002643135_022021-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "ZLXB13093"
+            },
+            "65229385070": {
+                "thumbnail": "http://http2.mlstatic.com/D_846086-MLA44368490838_122020-O.jpg",
+                "ratio": "1.00",
+                "name": "",
+                "pictures_qty": 7,
+                "inventory_id": "UFUO00665"
+            }
+        },
+        "installments": {
+            "quantity": 6,
+            "amount": 309.06,
+            "rate": 48.35,
+            "currency_id": "ARS"
+        },
+        "winner_item_id": null,
+        "discounts": null,
+        "promotions": null,
+        "inventory_id": null,
+        "cantidad": 3
+    }
+]

@@ -1,3 +1,6 @@
+
+const token="TEST-926637421921342-122011-96bc333adede832c93d7bde748b71ac9-182762410";
+
 let productosEnCarrito = sessionStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
@@ -26,27 +29,21 @@ function cargarProductosCarrito() {
             const div = document.createElement("div");
             div.classList.add("carrito-producto");
             div.innerHTML = `
-                <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+                <img class="carrito-producto-imagen" src="${producto.thumbnail}" alt="${producto.title}">
                 <div class="carrito-producto-titulo">
                     <small>Título</small>
-                    <h3>${producto.titulo}</h3>
+                    <h3>${producto.title}</h3>
                 </div>
-                <div class="carrito-producto-cantidad">
-                    <small>Cantidad</small>
-                    <p>${producto.cantidad}</p>
-                </div>
+                
                 <div class="carrito-producto-precio">
                     <small>Precio</small>
-                    <p>$${producto.precio}</p>
-                </div>
-                <div class="carrito-producto-subtotal">
-                    <small>Subtotal</small>
-                    <p>$${producto.precio * producto.cantidad}</p>
+                    <p>$${producto.unit_price}</p>
                 </div>
                 <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
             `;
     
             contenedorCarritoProductos.append(div);
+
         })
     
     } else {
@@ -55,10 +52,11 @@ function cargarProductosCarrito() {
         contenedorCarritoAcciones.classList.add("disabled");
         contenedorCarritoComprado.classList.add("disabled");
     }
-
     actualizarBotonesEliminar();
     actualizarTotal();
+    
 }
+
 
 cargarProductosCarrito();
 
@@ -78,6 +76,7 @@ function eliminarDelCarrito(e) {
     cargarProductosCarrito();
 
     sessionStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+            
 
 }
 
@@ -90,9 +89,10 @@ function vaciarCarrito() {
 
 
 function actualizarTotal() {
-    const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+    const totalCalculado = productosEnCarrito.reduce((acc, currentValue) => acc + (currentValue.price * currentValue.unit_price), 0);
     total.innerText = `$${totalCalculado}`;
 }
+
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
@@ -106,3 +106,70 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+const fetchML = (item) => fetch('https://api.mercadopago.com/checkout/preferences', {
+    headers: {
+        "Authorization": 'Bearer ' + token,
+        "Content-Type": "application/json"
+    },
+    method: 'POST',
+    body: JSON.stringify({
+            "items": [
+       item
+          ]
+    })
+})
+
+const pagoML = async (item) => {
+    // const response = await fetchML();
+    // const responseJSON = await response.json()
+    const response = await JSONResponse(fetchML(item))
+
+    console.log(response);
+    //REDIRIGIMOS A LA URL DE PAGO
+    window.location.href = response.init_point
+}
+const irAlPago = (e) => {
+    const id = e.target.getAttribute('ref');
+
+    const producto = productos.find(producto => producto.id === id);
+
+    if (!producto) {
+        return;
+    }
+
+    const item = {
+        title: producto.title,
+        picture_url: producto.thumbnail,
+        currency_id: producto.currency_id,
+        unit_price: producto.unit_price,
+        quantity:producto.available_quantity
+      }
+      botonComprar.innerHTML = spinner;
+      pagoML(item)
+    
+}
+
+function comprar(){
+    const items = {
+        items:JSON.parse(sessionStorage.getItem("productos-en-carrito"))
+    }
+    console.log((items));
+    const options = {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer TEST-926637421921342-122011-96bc333adede832c93d7bde748b71ac9-182762410'
+        },
+        body: JSON.stringify(items)
+      };
+
+      fetch('https://api.mercadopago.com/checkout/preferences', options)
+        .then(response => response.json())
+        .then(response => {
+            console.log(response);
+            window.location.href = response.sandbox_init_point;
+        })
+        .catch(err => console.error(err));
+}
+
+

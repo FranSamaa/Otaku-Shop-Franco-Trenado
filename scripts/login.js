@@ -10,5 +10,9 @@ function Login(){
     localStorage.setItem("user",JSON.stringify({usuario,password}))
 
     window.location.href = "./index.html"; 
-    } 
+}
 
+
+
+
+    

@@ -1,1 +1,0 @@
-# Otaku-Shop-Franco-Trenado
