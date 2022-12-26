@@ -1,4 +1,4 @@
-function singIn(){ 
+function Login(){ 
     
     const usuario=document.login.usuario.value; 
     const password=document.login.password.value; 
