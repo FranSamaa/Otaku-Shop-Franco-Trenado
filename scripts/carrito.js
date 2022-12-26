@@ -168,6 +168,11 @@ function comprar(){
         .then(response => response.json())
         .then(response => {
             console.log(response);
+            Swal.fire({
+                title:"Gracias Por Comprar",
+                text:"En OtakuShop",
+                icon:"success"
+           })
             window.location.href = response.sandbox_init_point;
         })
         .catch(err => console.error(err));

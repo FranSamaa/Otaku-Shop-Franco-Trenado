@@ -1,4 +1,4 @@
-function Login(){ 
+function singIn(){ 
     
     const usuario=document.login.usuario.value; 
     const password=document.login.password.value; 
@@ -8,9 +8,10 @@ function Login(){
         return false;
     }
     localStorage.setItem("user",JSON.stringify({usuario,password}))
-
-    window.location.href = "./index.html"; 
+    
+    window.location.href = "./index.html";
 }
+
 
 
 

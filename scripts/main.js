@@ -10,6 +10,19 @@ class ProductoCarrito{
 }
 
 
+function buscarPorTitulo(title,productosGuardados){
+    if(!productosGuardados){
+        return false
+    }
+    for (let i = 0; i < productosGuardados.length; i++) {
+        if (productosGuardados[i].title === title) {
+            return true
+        }
+    }
+    return false
+    
+}
+
 if (!localStorage.getItem("user")) {
     alert("No estás logueado, redirigiendo a la página de login...");
     window.location.href = "./login.html";
@@ -104,14 +117,14 @@ function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
 
     const productoAgregado = productos.find(producto => producto.id === idBoton);
+    
     const productoCarrito = new ProductoCarrito(
         productoAgregado.title,
         productoAgregado.description,
         productoAgregado.thumbnail,
         productoAgregado.currency_id,
         productoAgregado.price,
-        productoAgregado.available_quantity
-
+        1
         )
     if(productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
@@ -127,7 +140,14 @@ function agregarAlCarrito(e) {
 }
 
 function actualizarNumerito() {
-    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.unit_price, 0);
     numerito.innerText = nuevoNumerito;
 }
 
+document.addEventListener("keyup", (e) => {
+   if (e.target.matches("#buscador")) {
+       const texto = e.target.value.toLowerCase();
+       const productosFiltrados = productos.filter(producto => producto.title.toLowerCase().includes(texto));
+       cargarProductos(productosFiltrados);
+   }
+})

@@ -312,3 +312,19 @@ main {
 .disabled {
     display: none;
 }
+
+#buscador{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    background: url(https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/search.svg) no-repeat 10px 6px rgb(120, 84, 148);
+    background-position: 10px 6px;
+    background-size: 20px;
+    padding-left: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
